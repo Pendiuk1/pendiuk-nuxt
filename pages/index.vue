@@ -1,5 +1,10 @@
 <template>
-  <Tutorial />
+  <div class="main">
+    <NavBar />
+    <HeroSection/>
+    <SkillsSection/>
+    <PortfolioSection/>
+  </div>
 </template>
 
 <script>
