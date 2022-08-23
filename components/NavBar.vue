@@ -1,17 +1,8 @@
 <template>
-  <div id='NavBar' class="relative bg-white">
+  <div id='NavBar' class="absolute top-0 inset-x-0 bg-gray-300 bg-opacity-5  z-10">
     <div class="max-w-full px-4">
-      <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-        <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#">
-            <span class="sr-only">Workflow</span>
-            <img
-              class="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-              alt=""
-            />
-          </a>
-        </div>
+      <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+        <!-- OPEN MENU IN MOBILE -->
         <div class="md:hidden">
           <button
             type="button"
@@ -37,16 +28,15 @@
             </svg>
           </button>
         </div>
-        <nav class="hidden md:flex space-x-10">
+        <!-- LINKS TO SECTIONS -->
+        <nav class="hidden md:flex space-x-10 uppercase text-gray-50 text-base font-thin font-sans subpixel-antialiased">
           <a
             href="#Skills"
-            class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
             Skills
           </a>
           <a
             href="#Portfolio"
-            class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
             Portfolio
           </a>
@@ -70,6 +60,7 @@
       <div
         class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50"
       >
+            <!-- CLOSE MENU IN MOBILE -->
         <div class="pt-5 pb-6 px-5">
           <div class="flex items-center justify-between">
             <div>
@@ -105,6 +96,7 @@
             </div>
           </div>
         </div>
+        
         <div class="py-6 px-5 space-y-6">
           <div class="grid grid-cols-2 gap-y-4 gap-x-8">
             <a
