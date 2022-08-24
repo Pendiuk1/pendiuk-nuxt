@@ -19,7 +19,11 @@ module.exports = {
       none: 'none',
       'mine': '0px 0px 30px 0px rgba(110,231,183,0.2)',
     },  
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'hero':"url('~/assets/circuit-board.svg')"
+      }
+    },
   },
   variants: {
     extend: {},

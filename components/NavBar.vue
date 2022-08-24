@@ -1,5 +1,5 @@
 <template>
-  <div id='NavBar' class="absolute top-0 inset-x-0 bg-gray-300 bg-opacity-5  z-10">
+  <div id='NavBar' class="absolute top-0 inset-x-0 bg-gray-900 bg-opacity-90  z-10">
     <div class="max-w-full px-4">
       <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
         <!-- OPEN MENU IN MOBILE -->
