@@ -6,7 +6,7 @@
                 Desenvolvedor Web
             </h1>
             <p class="text-2xl font-normal text-gray-400">
-                Seu website atraente e moderno, desenvolvido por Guilherme Pendiuk.
+                Seu website <span class="text-gray-200">rápido</span>, <span class="text-gray-200">atraente</span> e <span class="text-gray-200">moderno</span>, desenvolvido por Guilherme Pendiuk.
             </p>
         </div>
         <div class="shadow-mine transform rotate-6 border-box bg-gradient-to-r from-gray-900 via-green-300 to-gray-900 p-0.5 rounded-2xl w-1/2 mx-4">

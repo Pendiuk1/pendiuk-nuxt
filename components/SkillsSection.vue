@@ -6,19 +6,22 @@
                     Minhas Skills
                 </h2>
                 <p class="mt-3 text-gray-600">
-                Veja abaixo as principais frameworks e bibliotecas com que trabalho.
+                Veja abaixo as principais frameworks, ferramentas e bibliotecas com que trabalho.
                 <br />
                 </p>
-                <div class="mt-4 pt-4 text-gray-800 border-t">
-                    
-                </div>
+                <SkillsCell class="mb-2" img-url = "vueLogo.svg" img-alt='LogotipoVueJS' title='Vue JS' desc='Vue.js é um framework versátil e eficiente em JavaScript focado no desenvolvimento de websites e aplicativos de página única.'/>
+                <SkillsCell img-url = "gitHubLogo.svg" img-alt='LogotipoGitHub' title='GitHub' desc='GitHub é uma plataforma de hospedagem de códigos com controle de versão, é uma das principais ferramentas que possibilitam o trabalho em equipe em projetos que envolvem programação.'/>                
+                <SkillsCell class="mb-2"  img-url = "nuxtLogo.svg" img-alt='LogotipoNuxt' title='Nuxt' desc='Nuxt é um framework que permite a construção de websites baseados em VueJS com diversas melhorias e automatizações porém utiliza uma versão anterior de VueJS.'/>               
+                <SkillsCell class="mb-2"  img-url = "tailwindLogo.svg" img-alt='LogotipoTailwind' title='TailwindCSS' desc='Tailwind CSS é uma espécie de biblioteca que permite o design dos componentes de um website através do uso de classes em HTML.'/>               
+                <SkillsCell class="mb-2"  img-url = "vuetify-logo.svg" img-alt='LogotipoVuetify' title='Vuetify' desc='Vuetify é uma biblioteca para VueJS que contem diversos componentes "pré-fabricados" para a construção de websites.'/>              
+                <SkillsCell img-url = "bootstrapLogo.png" img-alt='LogotipoBootstrap' title='Bootstrap' desc='Assim como o Tailwind CSS, Bootstrap é uma biblioteca para facilitar o design dos componentes de um website.'/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-  name: 'SkillsSection',
-}
+    export default {
+        name: 'SkillsSection',
+    }
 </script>
