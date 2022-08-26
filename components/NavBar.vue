@@ -19,14 +19,14 @@
         <div v-show="!menuShow" class="md:hidden">
           <button
             type="button"
-            class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            class="bg-blue-600 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 border-2 border-blue-500"
             aria-expanded="false"
             @click="menuShow = !menuShow"
           >
             <span class="sr-only">Open menu</span>
             <!-- Heroicon name: outline/menu -->
             <svg
-              class="h-6 w-6"
+              class="h-6 w-6 text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -60,7 +60,7 @@
       class="absolute top-0 right-0 w-1/2 xxs:w-1/3 p-2 transition transform origin-top-right md:hidden"
     >
       <div
-        class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-100 divide-y-2 divide-gray-50"
+        class="rounded-lg shadow-mine ring-1 ring-black ring-opacity-5 bg-blue-900 divide-y-2 divide-green-400"
       >
             <!-- CLOSE MENU IN MOBILE -->
         <div class="pt-2 pb-2 px-5">
@@ -68,13 +68,13 @@
             <div class="-mr-2">
               <button
                 type="button"
-                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="bg-blue-600 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 border-2 border-blue-500"
                 @click="menuShow = !menuShow"
               >
                 <span class="sr-only">Close menu</span>
                 <!-- Heroicon name: outline/x -->
                 <svg
-                  class="h-6 w-6"
+                  class="h-6 w-6 text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -94,14 +94,16 @@
         </div>
         
         <div class="py-4 px-5 space-y-4">
-          <div class="grid grid-cols-1 gap-y-4 gap-x-8 uppercase text-gray-900 text-base font-thin font-sans subpixel-antialiased">
-            <a
+          <div class="grid grid-cols-1 gap-y-4 gap-x-8 uppercase text-white text-base font-thin font-sans subpixel-antialiased">
+            <a 
             href="#Skills"
+            @click="menuShow = !menuShow"
           >
             Skills
           </a>
-          <a
+          <a 
             href="#Portfolio"
+          @click="menuShow = !menuShow"
           >
             Portfólio
           </a>
@@ -117,7 +119,7 @@ export default {
   name: 'NavBar',
   data(){
     return{
-        menuShow: 'false',
+        menuShow: false,
     }
   },
 }

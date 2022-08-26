@@ -15,6 +15,7 @@ module.exports = {
       'mine': '0px 0px 30px 0px rgba(110,231,183,0.2)',
     }, 
     screens:{
+      'xxxs':'380px',
       'xxs':'500px',
       'xs':'560px',
       'sm': '640px',
