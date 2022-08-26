@@ -1,9 +1,9 @@
 <template>
   <div
-    class="border-box bg-gradient-to-b from-gray-800 via-green-300 to-gray-800 py-0.5 px-1 rounded-xl"
+    class="border-box min-w-min bg-gradient-to-b from-gray-800 via-green-300 to-gray-800 py-0.5 px-1 rounded-xl"
   >
     <div
-      class="w-40 bg-gray-400 rounded-xl h-32 flex items-center justify-center overflow-hidden"
+      class="w-40 bg-gray-400 rounded-xl h-32 self-center flex items-center justify-center overflow-hidden"
     >
       <div
         class="bg-white text-black bg-clip-content min-w-full my-auto text-center transform -rotate-12 shadow-lg border-4"
@@ -15,7 +15,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+    name:'PortfolioCell'
+}
 </script>
 
 <style></style>

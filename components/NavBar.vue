@@ -1,13 +1,27 @@
 <template>
   <div id='NavBar' class="absolute top-0 inset-x-0 bg-gray-900 bg-opacity-90  z-10">
     <div class="max-w-full px-4">
-      <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+      <div class="flex items-center py-2 md:py-4 justify-end md:justify-start md:space-x-10">
+        <!-- LINKS TO SECTIONS -->
+        <nav class="hidden md:flex space-x-10 uppercase text-gray-50 text-base font-thin font-sans subpixel-antialiased">
+          <a
+            href="#Skills"
+          >
+            Skills
+          </a>
+          <a
+            href="#Portfolio"
+          >
+            Portfólio
+          </a>
+        </nav>
         <!-- OPEN MENU IN MOBILE -->
-        <div class="md:hidden">
+        <div v-show="!menuShow" class="md:hidden">
           <button
             type="button"
             class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             aria-expanded="false"
+            @click="menuShow = !menuShow"
           >
             <span class="sr-only">Open menu</span>
             <!-- Heroicon name: outline/menu -->
@@ -28,19 +42,6 @@
             </svg>
           </button>
         </div>
-        <!-- LINKS TO SECTIONS -->
-        <nav class="hidden md:flex space-x-10 uppercase text-gray-50 text-base font-thin font-sans subpixel-antialiased">
-          <a
-            href="#Skills"
-          >
-            Skills
-          </a>
-          <a
-            href="#Portfolio"
-          >
-            Portfolio
-          </a>
-        </nav>
       </div>
     </div>
 
@@ -55,25 +56,20 @@
         To: "opacity-0 scale-95"
     -->
     <div
-      class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+      v-show="menuShow"
+      class="absolute top-0 right-0 w-1/2 xxs:w-1/3 p-2 transition transform origin-top-right md:hidden"
     >
       <div
-        class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50"
+        class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-100 divide-y-2 divide-gray-50"
       >
             <!-- CLOSE MENU IN MOBILE -->
-        <div class="pt-5 pb-6 px-5">
-          <div class="flex items-center justify-between">
-            <div>
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                alt="Workflow"
-              />
-            </div>
+        <div class="pt-2 pb-2 px-5">
+          <div class="flex items-center justify-end">
             <div class="-mr-2">
               <button
                 type="button"
                 class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                @click="menuShow = !menuShow"
               >
                 <span class="sr-only">Close menu</span>
                 <!-- Heroicon name: outline/x -->
@@ -97,21 +93,18 @@
           </div>
         </div>
         
-        <div class="py-6 px-5 space-y-6">
-          <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+        <div class="py-4 px-5 space-y-4">
+          <div class="grid grid-cols-1 gap-y-4 gap-x-8 uppercase text-gray-900 text-base font-thin font-sans subpixel-antialiased">
             <a
-              href="#"
-              class="text-base font-medium text-gray-900 hover:text-gray-700"
-            >
-              Pricing
-            </a>
-
-            <a
-              href="#"
-              class="text-base font-medium text-gray-900 hover:text-gray-700"
-            >
-              Docs
-            </a>
+            href="#Skills"
+          >
+            Skills
+          </a>
+          <a
+            href="#Portfolio"
+          >
+            Portfólio
+          </a>
         </div>
         </div>
       </div>
@@ -122,6 +115,11 @@
 <script>
 export default {
   name: 'NavBar',
+  data(){
+    return{
+        menuShow: 'false',
+    }
+  },
 }
 </script>
 

@@ -1,9 +1,9 @@
 <template>
-  <div class="main">
-    <link
+  <div class="main overflow:scroll sm:overflow-hidden w-500 xxs:w-auto">
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
       rel="stylesheet"
-    />
+    /> -->
     <NavBar />
     <HeroSection/>
     <SkillsSection/>
