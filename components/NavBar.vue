@@ -3,17 +3,23 @@
     <div class="max-w-full px-4">
       <div class="flex items-center py-2 md:py-4 justify-end md:justify-start md:space-x-10">
         <!-- LINKS TO SECTIONS -->
-        <nav class="hidden md:flex space-x-10 uppercase text-gray-50 text-base font-thin font-sans subpixel-antialiased">
+        <nav class="hidden md:flex space-x-10 w-full uppercase text-gray-50 text-base font-thin font-sans subpixel-antialiased">
           <a
             href="#Skills"
           >
-            Skills
+            {{$t('L1')}}
           </a>
           <a
             href="#Portfolio"
           >
-            Portfólio
+            {{$t('L2')}}
           </a>
+          <span class="flex-grow"></span>
+          <nuxt-link 
+            v-for="locale in availableLocales"
+            :key="locale.code"
+            class="justify-self-end text-xs text-gray-300"
+            :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
         </nav>
         <!-- OPEN MENU IN MOBILE -->
         <div v-show="!menuShow" class="md:hidden">
@@ -23,7 +29,7 @@
             aria-expanded="false"
             @click="menuShow = !menuShow"
           >
-            <span class="sr-only">Open menu</span>
+            <span class="sr-only">{{$t('open')}}</span>
             <!-- Heroicon name: outline/menu -->
             <svg
               class="h-6 w-6 text-white"
@@ -71,7 +77,7 @@
                 class="bg-blue-600 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 border-2 border-blue-500"
                 @click="menuShow = !menuShow"
               >
-                <span class="sr-only">Close menu</span>
+                <span class="sr-only">{{$t('close')}}</span>
                 <!-- Heroicon name: outline/x -->
                 <svg
                   class="h-6 w-6 text-white"
@@ -99,14 +105,20 @@
             href="#Skills"
             @click="menuShow = !menuShow"
           >
-            Skills
+            {{$t('L1')}}
           </a>
           <a 
             href="#Portfolio"
           @click="menuShow = !menuShow"
           >
-            Portfólio
+            {{$t('L2')}}
           </a>
+          <span class="border-t-2 border-green-400"></span>
+          <nuxt-link 
+            v-for="locale in availableLocales"
+            :key="locale.code"
+            class="text-xs text-gray-300"
+            :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
         </div>
         </div>
       </div>
@@ -122,7 +134,29 @@ export default {
         menuShow: false,
     }
   },
+  computed: {
+  availableLocales () {
+    return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+  }
+}
 }
 </script>
+
+<i18n>
+{
+  "en":{
+    "L1":"Skills",
+    "L2":"Portfolio",
+    "open": "Open Menu",
+    "close":"Close Menu"
+  },
+  "pt":{
+    "L1":"Skills",
+    "L2":"Portfólio",
+    "open": "Abrir Menu",
+    "close":"Fechar Menu"
+  }
+}
+</i18n>
 
 <style></style>

@@ -10,7 +10,7 @@
             required="required"
             placeholder=" "
           />
-          <span>nome</span>
+          <span>{{$t('nome')}}</span>
           <i></i>
         </div>
         <div class="inputBox">
@@ -21,7 +21,7 @@
             required="required"
             placeholder=" "
           />
-          <span>e-mail</span>
+          <span>E-mail</span>
           <i></i>
         </div>
         <div class="inputBox">
@@ -31,19 +31,19 @@
             required="required"
             placeholder=" "
           ></textarea>
-          <span>mensagem</span>
+          <span>{{$t('msg')}}</span>
           <i></i>
         </div>
         <div class="buttons">
           <input
             type="submit"
-            value="Enviar"
+            :value="sendMsg"
             class="submitButton"
             @click.prevent="onSubmit()"
           />
           <input
             type="button"
-            value="Voltar"
+            :value="backMsg"
             class="submitButton"
             @click.prevent="onCancel()"
           />
@@ -51,22 +51,39 @@
       </form>
       <footer>
         <span
-          >Todas as informações inseridas serão usadas APENAS pelo autor deste website 
-          para o ÚNICO propósito de responder sua mensagem.</span
+          >{{$t('footer')}}</span
         >
       </footer>
     </div>
     <div v-else class="thank-you">
-      <p>Obrigado!</p>
+      <p>{{$t('thanks')}}</p>
     </div>
   </transition>
 </template>
+
+<i18n>
+{
+  "en":{
+    "nome":"Name",
+    "msg": "Message",
+    "footer": "All information provided will be used ONLY by the website author and for the SOLE purpose of replying.",
+    "thanks":"Thank You!"
+  },
+  "pt":{
+    "nome":"Nome",
+    "msg": "Mensagem",
+    "footer": "Todas as informações inseridas serão usadas APENAS pelo autor deste website para o ÚNICO propósito de responder sua mensagem.",
+    "thanks":"Obrigado!"
+  }
+}
+</i18n>
 
 <script>
 import {collection, addDoc} from 'firebase/firestore'
 import { db } from "~/plugins/firebase.js"
 
 export default{
+  name:'ContactView',
   data(){
     return{
       name: "",
@@ -75,16 +92,29 @@ export default{
       answered: false,
     }
   },
+  head(){
+    return{
+      title: 'Contact'
+    }
+  },
+  computed:{
+    sendMsg(){
+      return this.$i18n.locale === 'en'? "Send" : "Enviar"
+    },
+    backMsg(){
+      return this.$i18n.locale === 'en'? "Back" : "Voltar"
+    }
+  },
   methods:{
     async onSubmit(e){
       if (!this.name) {
-        alert("Por favor, escreva seu nome.");
+        alert(this.$i18n.locale === 'en'?"Please, write your name.":"Por favor, escreva seu nome.");
         return;
       } else if (!this.email) {
-        alert("Por favor, escreva seu e-mail.");
+        alert(this.$i18n.locale === 'en'?"Please, write your e-mail.":"Por favor, escreva seu e-mail.");
         return;
       } else if (!this.msg) {
-        alert("Por favor, escreva sua mensagem.");
+        alert(this.$i18n.locale === 'en'?"Please, write your message.":"Por favor, escreva sua mensagem.");
         return;
       }
       try {
@@ -110,7 +140,7 @@ export default{
     onCancel(e){
       this.$router.push({ path: "/" });
     }
-  }
+  },
 }
 </script>
 

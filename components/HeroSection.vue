@@ -3,12 +3,12 @@
     <div class="flex flex-col lg:flex-row lg:min-h-screen items-top justify-center bg-gradient-to-b from-slate via-transparent lg:from-transparent to-slate items-center py-4 sm:py-6  lg:px-8">   
         <div class="w-11/12 sm:w-3/4 lg:w-1/2  my-20 md:my-32 lg:my-0 lg:mx-4 text-center sm:text-left">
             <h1 class="font-light text-transparent text-5xl sm:text-7xl bg-clip-text bg-gradient-to-r from-gray-300 via-blue-400 to-gray-300">
-                Desenvolvedor Web
+                {{$t('titulo')}}
             </h1>
             <p class="text-2xl font-normal text-gray-400 mb-8">
-                Seu website <span class="text-gray-200">rápido</span>, <span class="text-gray-200">atraente</span> e <span class="text-gray-200">moderno</span>, desenvolvido por Guilherme Pendiuk.
+                {{$t('subtitulo1')}} <span class="text-gray-200">{{$t('subtitulo2')}}</span>, <span class="text-gray-200">{{$t('subtitulo3')}}</span> {{$t('subtitulo4')}} <span class="text-gray-200">{{$t('subtitulo5')}}</span>, {{$t('subtitulo6')}}.
             </p>
-            <NuxtLink class="p-2 text-gray-300 bg-blue-600 bg-opacity-70 text-lg rounded-xl hover:bg-opacity-50 border-2 border-blue-600 hover:border-green-400" to="/ContactView">Fale Comigo!</NuxtLink>
+            <NuxtLink class="p-2 text-gray-300 bg-blue-600 bg-opacity-70 text-lg rounded-xl hover:bg-opacity-50 border-2 border-blue-600 hover:border-green-400" to="/ContactView">{{$t('botao')}}</NuxtLink>
         </div>
 
         
@@ -38,3 +38,28 @@
         name: 'HeroSection',
     }
 </script>
+
+<i18n>
+{
+  "en":{
+    "titulo":"Web Developer",
+    "subtitulo1":"Your website",
+    "subtitulo2":"fast",
+    "subtitulo3":"modern",
+    "subtitulo4":"and",
+    "subtitulo5":"appealing",
+    "subtitulo6":"designed by Guilherme Pendiuk",
+    "botao": "Talk to Me!"
+  },
+  "pt":{
+    "titulo":"Desenvolvedor Web",
+    "subtitulo1":"Seu website",
+    "subtitulo2":"rápido",
+    "subtitulo3":"atraente",
+    "subtitulo4":"e",
+    "subtitulo5":"moderno",
+    "subtitulo6":"desenvolvido por Guilherme Pendiuk",
+    "botao": "Fale Comigo!"
+  }
+}
+</i18n>

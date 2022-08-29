@@ -10,19 +10,26 @@ export default {
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: 'Pendiuk',
-    htmlAttrs: {
-      lang: 'pt-br',
+    head () {
+      const i18nHead = this.$nuxtI18nHead
+      ? this.$nuxtI18nHead({ addSeoAttributes: true })
+      :{
+          title: 'Pendiuk',
+          htmlAttrs: {
+            lang: 'en',
+          },
+          meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: 'Web Developer' },
+            { name: 'format-detection', content: 'telephone=no' },
+          ],
+          link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        }
+
+      return i18nHead
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-  },
+
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
@@ -48,6 +55,7 @@ export default {
     ['nuxt-highlightjs',{
       style:'tokyo-night-dark'
     }],
+    '@nuxtjs/i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -58,4 +66,18 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  //translations options
+  i18n: {
+    baseUrl: 'https://pendiuk.com',
+    locales: [
+      {code:'pt', iso:'pt-BR', dir:'ltr', name:'Português'},
+      {code: 'en', iso:'en-US', dir:'ltr', name: 'English'},
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+    vueI18nLoader: true,
+  }
 }
