@@ -134,11 +134,11 @@ export default{
       this.email = "";
       this.answered = true;
       setTimeout(() => {
-        this.$router.push({ path: "/" });
+        this.$router.push(this.localeLocation({ path: "/" }));
       }, 5000);
     },
     onCancel(e){
-      this.$router.push({ path: "/" });
+      this.$router.push(this.localeLocation({ path: "/" }));
     }
   },
 }

@@ -3,22 +3,59 @@
         <div class="max-w-4xl mx-2 sm:mx-auto border-box bg-gradient-to-b from-gray-800 via-green-300 to-gray-800 p-1 rounded-lg">
             <div class="bg-gray-100 overflow-hidden shadow rounded-lg p-6">
                 <h2 class="text-2xl leading-7 font-semibold sm:text-center">
-                    Minhas Skills
+                    {{$t('title')}}
                 </h2>
                 <p class="mt-4 sm:mt-8 text-gray-600">
-                Veja abaixo as principais frameworks, ferramentas e bibliotecas com que trabalho.
+                    {{$t('subtitle')}}
                 <br />
                 </p>
-                <SkillsCell class="mb-2" img-url = "vueLogo.svg" img-alt='LogotipoVueJS' title='Vue JS' desc='Vue.js é um framework versátil e eficiente em JavaScript focado no desenvolvimento de websites e aplicativos de página única.'/>
-                <SkillsCell img-url = "gitHubLogo.svg" img-alt='LogotipoGitHub' title='GitHub' desc='GitHub é uma plataforma de hospedagem de códigos com controle de versão, é uma das principais ferramentas que possibilitam o trabalho em equipe em projetos que envolvem programação.'/>                
-                <SkillsCell class="mb-2"  img-url = "nuxtLogo.svg" img-alt='LogotipoNuxt' title='Nuxt' desc='Nuxt é um framework que permite a construção de websites baseados em VueJS com diversas melhorias e automatizações porém utiliza uma versão anterior do VueJS.'/>               
-                <SkillsCell class="mb-2"  img-url = "tailwindLogo.svg" img-alt='LogotipoTailwind' title='TailwindCSS' desc='Tailwind CSS é uma espécie de biblioteca que permite o design dos componentes de um website através do uso de classes em HTML.'/>               
-                <SkillsCell class="mb-2"  img-url = "vuetify-logo.svg" img-alt='LogotipoVuetify' title='Vuetify' desc='Vuetify é uma biblioteca para VueJS que contem diversos componentes "pré-fabricados" para a construção de websites.'/>              
-                <SkillsCell img-url = "bootstrapLogo.png" img-alt='LogotipoBootstrap' title='Bootstrap' desc='Assim como o Tailwind CSS, Bootstrap é uma biblioteca para facilitar o design dos componentes de um website.'/>
+                <SkillsCell class="mb-2" img-url = "vueLogo.svg" img-alt='LogotipoVueJS' :title="$t('T1')" :desc="$t('D1')"/>
+                <SkillsCell img-url = "gitHubLogo.svg" img-alt='LogotipoGitHub' :title="$t('T2')" :desc="$t('D2')"/>                
+                <SkillsCell class="mb-2"  img-url = "nuxtLogo.svg" img-alt='LogotipoNuxt' :title="$t('T3')" :desc="$t('D3')"/>               
+                <SkillsCell class="mb-2"  img-url = "tailwindLogo.svg" img-alt='LogotipoTailwind' :title="$t('T4')" :desc="$t('D4')"/>               
+                <SkillsCell class="mb-2"  img-url = "vuetify-logo.svg" img-alt='LogotipoVuetify' :title="$t('T5')" :desc="$t('D5')"/>              
+                <SkillsCell img-url = "bootstrapLogo.png" img-alt='LogotipoBootstrap' :title="$t('T6')" :desc="$t('D6')"/>
             </div>
         </div>
     </div>
 </template>
+
+<i18n>
+{
+  "en":{
+    "title":"My Skills",
+    "subtitle":"See below the main frameworks, tools and libraries I work with.",
+    "T1":"Vue JS",
+    "D1":"Vue.js is a versatile and powerful JavaScript framework focused on developing single-page websites and applications.",
+    "T2":"GitHub",
+    "D2":"GitHub is a code hosting platform with version control, it is one of the main tools that allow teamwork on projects that involve programming.",
+    "T3":"Nuxt",
+    "D3":"Nuxt is a framework that allows the construction of websites based on Vue JS with several improvements and automations, however it uses a previous version of Vue JS.",
+    "T4":"TailwindCSS",
+    "D4":"Tailwind CSS is a kind of library that allows the design of website components through the use of HTML classes.",
+    "T5":"Vuetify",
+    "D5":"Vuetify is a library for Vue JS that contains several 'pre-made' components for building websites.",
+    "T6":"Bootstrap",
+    "D6":"Like Tailwind CSS, Bootstrap is a library to facilitate the design of website components."
+  },
+  "pt":{
+    "title":"Minhas Skills",
+    "subtitle":"Veja abaixo as principais frameworks, ferramentas e bibliotecas com que trabalho.",
+    "T1":"Vue JS",
+    "D1":"Vue Js é um framework versátil e eficiente em JavaScript focado no desenvolvimento de websites e aplicativos de página única.",
+    "T2":"GitHub",
+    "D2":"GitHub é uma plataforma de hospedagem de códigos com controle de versão, é uma das principais ferramentas que possibilitam o trabalho em equipe em projetos que envolvem programação.",
+    "T3":"Nuxt",
+    "D3":"Nuxt é um framework que permite a construção de websites baseados em Vue JS com diversas melhorias e automatizações porém utiliza uma versão anterior do Vue JS.",
+    "T4":"TailwindCSS",
+    "D4":"Tailwind CSS é uma espécie de biblioteca que permite o design dos componentes de um website através do uso de classes em HTML.",
+    "T5":"Vuetify",
+    "D5":"Vuetify é uma biblioteca para VueJS que contem diversos componentes 'pré-fabricados' para a construção de websites.",
+    "T6":"Bootstrap",
+    "D6":"Assim como o Tailwind CSS, Bootstrap é uma biblioteca para facilitar o design dos componentes de um website."
+  }
+}
+</i18n> 
 
 <script>
     export default {

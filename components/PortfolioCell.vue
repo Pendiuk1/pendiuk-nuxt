@@ -8,11 +8,22 @@
       <div
         class="bg-white text-black bg-clip-content min-w-full my-auto text-center transform -rotate-12 shadow-lg border-4"
       >
-        <p class="">EM BREVE</p>
+        <p class="">{{$t('soon')}}</p>
       </div>
     </div>
   </div>
 </template>
+
+<i18n>
+{
+  "en":{
+    "soon":"COMING SOON"
+  },
+  "pt":{
+    "soon":"EM BREVE"
+  }
+}
+</i18n> 
 
 <script>
 export default {

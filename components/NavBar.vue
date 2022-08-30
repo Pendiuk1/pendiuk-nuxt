@@ -15,11 +15,12 @@
             {{$t('L2')}}
           </a>
           <span class="flex-grow"></span>
-          <nuxt-link 
+          <a 
             v-for="locale in availableLocales"
             :key="locale.code"
-            class="justify-self-end text-xs text-gray-300"
-            :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+            href="#"
+            class="text-xs text-gray-300"
+            @click.prevent.stop="$i18n.setLocale(locale.code)">{{ locale.name }}</a>
         </nav>
         <!-- OPEN MENU IN MOBILE -->
         <div v-show="!menuShow" class="md:hidden">
@@ -114,11 +115,12 @@
             {{$t('L2')}}
           </a>
           <span class="border-t-2 border-green-400"></span>
-          <nuxt-link 
+          <a 
             v-for="locale in availableLocales"
             :key="locale.code"
+            href="#"
             class="text-xs text-gray-300"
-            :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+            @click.prevent.stop="$i18n.setLocale(locale.code)">{{ locale.name }}</a>
         </div>
         </div>
       </div>

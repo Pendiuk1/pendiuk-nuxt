@@ -8,7 +8,7 @@
             <p class="text-2xl font-normal text-gray-400 mb-8">
                 {{$t('subtitulo1')}} <span class="text-gray-200">{{$t('subtitulo2')}}</span>, <span class="text-gray-200">{{$t('subtitulo3')}}</span> {{$t('subtitulo4')}} <span class="text-gray-200">{{$t('subtitulo5')}}</span>, {{$t('subtitulo6')}}.
             </p>
-            <NuxtLink class="p-2 text-gray-300 bg-blue-600 bg-opacity-70 text-lg rounded-xl hover:bg-opacity-50 border-2 border-blue-600 hover:border-green-400" to="/ContactView">{{$t('botao')}}</NuxtLink>
+            <NuxtLink class="p-2 text-gray-300 bg-blue-600 bg-opacity-70 text-lg rounded-xl hover:bg-opacity-50 border-2 border-blue-600 hover:border-green-400" :to="localePath('/ContactView')">{{$t('botao')}}</NuxtLink>
         </div>
 
         

@@ -79,5 +79,11 @@ export default {
       fallbackLocale: 'en',
     },
     vueI18nLoader: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'pendiuk_lang_redirected',
+      redirectOn: 'root',  // recommended
+      alwaysRedirect: true,
+    },
   }
 }
