@@ -18,7 +18,7 @@
         @mouseover="show=true" @mouseleave="show=false" @click="showModal"
       >
         <div class="w-60 h-44 xs:w-48 xs:h-36 bg-gray-400 rounded-xl self-center flex items-center justify-center overflow-hidden">
-          <img :src="imgUrl" :alt="imgAlt" class="h-full w-full">
+          <nuxt-img provider="cloudinary" sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw" :src="imgUrl" format="webp" :alt="imgAlt" class="h-full w-full"/>
           <Transition name="fade">
             <div v-show="show" class="absolute bg-gray-200 rounded-b-xl self-end w-60 xs:w-48 text-center">
                 <span>{{title}}</span>
@@ -32,7 +32,7 @@
     <!-- MODAL -->
     <b-modal ref="my-modal" hide-footer scrollable :title=title>
       <div class="d-block">
-        <img :src="imgUrl" :alt="imgAlt" class="h-44 w-60 mx-auto mb-4">
+        <nuxt-img provider="cloudinary" sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw" :src="imgUrl" format="webp" :alt="imgAlt" class="h-44 w-60 mx-auto mb-4"/>
         <h3>{{desc.text}}</h3>
         <h3 class="mt-2">{{$t('list')}}</h3>
         <ul class="list-disc ml-4 mt-1">

@@ -63,7 +63,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -111,5 +112,22 @@ export default {
       solid:true,
       brands:true
     }
-  }
+  },
+
+  image:{
+    screens: {
+      xxxs: 380,
+      xxs: 500,
+      xs: 560,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536
+    },
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/pendiuk-com/image/upload/v1663089589/MyWebsite/'
+    }
+  },
 }

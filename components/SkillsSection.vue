@@ -9,12 +9,12 @@
                     {{$t('subtitle')}}
                 <br />
                 </p>
-                <SkillsCell class="mb-2" img-url = "vueLogo.svg" img-alt='LogotipoVueJS' :title="$t('T1')" :desc="$t('D1')"/>
-                <SkillsCell img-url = "gitHubLogo.svg" img-alt='LogotipoGitHub' :title="$t('T2')" :desc="$t('D2')"/>                
-                <SkillsCell class="mb-2"  img-url = "nuxtLogo.svg" img-alt='LogotipoNuxt' :title="$t('T3')" :desc="$t('D3')"/>               
-                <SkillsCell class="mb-2"  img-url = "tailwindLogo.svg" img-alt='LogotipoTailwind' :title="$t('T4')" :desc="$t('D4')"/>               
-                <SkillsCell class="mb-2"  img-url = "vuetify-logo.svg" img-alt='LogotipoVuetify' :title="$t('T5')" :desc="$t('D5')"/>              
-                <SkillsCell img-url = "bootstrapLogo.png" img-alt='LogotipoBootstrap' :title="$t('T6')" :desc="$t('D6')"/>
+                <SkillsCell class="mb-2" img-url = "vueLogo_kqsbhe.svg" img-alt='LogotipoVueJS' :title="$t('T1')" :desc="$t('D1')"/>
+                <SkillsCell img-url = "gitHubLogo_crvtwk.svg" img-alt='LogotipoGitHub' :title="$t('T2')" :desc="$t('D2')"/>                
+                <SkillsCell class="mb-2"  img-url = "nuxtLogo_mp6004.svg" img-alt='LogotipoNuxt' :title="$t('T3')" :desc="$t('D3')"/>               
+                <SkillsCell class="mb-2"  img-url = "tailwindLogo_edqrz1.svg" img-alt='LogotipoTailwind' :title="$t('T4')" :desc="$t('D4')"/>               
+                <SkillsCell class="mb-2"  img-url = "vuetify-logo_oju7xf.svg" img-alt='LogotipoVuetify' :title="$t('T5')" :desc="$t('D5')"/>              
+                <SkillsCell img-url = "bootstrapLogo_sfs69j.png" img-alt='LogotipoBootstrap' :title="$t('T6')" :desc="$t('D6')"/>
             </div>
         </div>
     </div>

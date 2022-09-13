@@ -4,7 +4,7 @@
             {{$t('title')}}
         </h2>
         <div class="grid gap-x-8 gap-y-4 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-            <PortfolioCell :img-url="require(`~/assets/MeuSite.png`)" :img-alt="$t('a1')" :title="$t('p1')" :desc="$t('d1')"/>
+            <PortfolioCell img-url="MeuSite_kij9tl.png" :img-alt="$t('a1')" :title="$t('p1')" :desc="$t('d1')"/>
             <PortfolioCell/>
             <PortfolioCell/>
             <PortfolioCell/>
