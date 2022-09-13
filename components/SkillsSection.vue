@@ -1,11 +1,11 @@
 <template>
     <div id='Skills' class="relative flex justify-center bg-slate sm:items-center sm:pt-0 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-2 sm:mx-auto border-box bg-gradient-to-b from-gray-800 via-green-300 to-gray-800 p-1 rounded-lg">
-            <div class="bg-gray-100 overflow-hidden shadow rounded-lg p-6">
+            <div class="bg-gray-100 overflow-hidden shadow rounded-lg p-4 xxs:p-6">
                 <h2 class="text-2xl leading-7 font-semibold sm:text-center">
                     {{$t('title')}}
                 </h2>
-                <p class="mt-4 sm:mt-8 text-gray-600">
+                <p class="mt-2 xxs:mt-4 sm:mt-8 text-gray-600">
                     {{$t('subtitle')}}
                 <br />
                 </p>

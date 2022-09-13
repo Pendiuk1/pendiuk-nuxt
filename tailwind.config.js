@@ -35,6 +35,9 @@ module.exports = {
       },
       spacing:{
         '500':'32rem'
+      },
+      height:{
+        '768':'768px'
       }
     },
   },

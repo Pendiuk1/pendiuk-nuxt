@@ -11,9 +11,27 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
     head () {
-      const i18nHead = this.$nuxtI18nHead
-      ? this.$nuxtI18nHead({ addSeoAttributes: true })
-      :{
+      if (this.$nuxtI18nHead){
+        const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+        return {
+          title: 'Pendiuk',
+          htmlAttrs: {
+            ...i18nHead.htmlAttrs
+          },
+          meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: 'Web Developer' },
+            { name: 'format-detection', content: 'telephone=no' },
+            ...i18nHead.meta
+          ],
+          link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            ...i18nHead.link
+          ]
+        }
+      }else{
+        return{
           title: 'Pendiuk',
           htmlAttrs: {
             lang: 'en',
@@ -26,8 +44,7 @@ export default {
           ],
           link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
         }
-
-      return i18nHead
+      }
     },
 
 
@@ -46,6 +63,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -55,7 +73,8 @@ export default {
     ['nuxt-highlightjs',{
       style:'tokyo-night-dark'
     }],
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    'bootstrap-vue/nuxt'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -85,5 +104,12 @@ export default {
       redirectOn: 'root',  // recommended
       alwaysRedirect: true,
     },
+  },
+
+  fontawesome:{
+    icons:{
+      solid:true,
+      brands:true
+    }
   }
 }
