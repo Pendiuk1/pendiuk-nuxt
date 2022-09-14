@@ -126,6 +126,7 @@ export default {
       xxl: 1536,
       '2xl': 1536
     },
+
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/pendiuk-com/image/upload/v1663089589/MyWebsite/'
     }
